@@ -3,5 +3,5 @@ MAINTAINER reiiissamuel@gmail.com
 ARG JAR_FILE=hermodr-1.0-SNAPSHOT-jar-with-dependencies
 COPY ${JAVA_FILE} hermodr-1.0.jar
 EXPOSE 8085
-RUN java -jar hermodr-1.0.jar
+CMD java -jar hermodr-1.0.jar
 	
