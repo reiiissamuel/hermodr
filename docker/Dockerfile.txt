@@ -1,6 +1,6 @@
 FROM openjdk:11-jre-slim
 MAINTAINER reiiissamuel@gmail.com
-COPY ./hermodr-1.0-SNAPSHOT-jar-with-dependencies /usr/app/
+COPY hermodr-1.0-SNAPSHOT-jar-with-dependencies /usr/app/
 WORKDIR /usr/app
 EXPOSE 8085
 CMD java -jar hermodr-1.0-SNAPSHOT-jar-with-dependencies
