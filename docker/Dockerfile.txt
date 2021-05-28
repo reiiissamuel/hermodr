@@ -2,5 +2,5 @@ FROM openjdk:11-jre-slim
 MAINTAINER reiiissamuel@gmail.com
 WORKDIR /usr/app
 EXPOSE 8085
-RUN java -jar hermodr-1.0-SNAPSHOT-jar-with-dependencies
+RUN java -jar ..resources/hermodr-1.0-SNAPSHOT-jar-with-dependencies
 	
