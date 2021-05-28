@@ -1,0 +1,197 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 268435456 bytes for Failed to commit area from 0x0000000701800000 to 0x0000000711800000 of length 268435456.
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (./open/src/hotspot/os/windows/os_windows.cpp:3273), pid=15840, tid=8300
+#
+# JRE version:  (11.0.11+9) (build )
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (11.0.11+9-LTS-194, mixed mode, sharing, tiered, compressed oops, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2020.3.2\lib\idea_rt.jar=53221:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2020.3.2\bin -Dfile.encoding=UTF-8 br.bot.hermodr.HermodrBotApplication
+
+Host: Intel(R) Core(TM) i7-8550U CPU @ 1.80GHz, 8 cores, 15G,  Windows 10 , 64 bit Build 17134 (10.0.17134.2145)
+Time: Fri May 28 10:15:21 2021 Hora oficial do Brasil elapsed time: 0.020968 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00000177f4dda000):  JavaThread "Unknown thread" [_thread_in_vm, id=8300, stack(0x0000005a72d00000,0x0000005a72e00000)]
+
+Stack: [0x0000005a72d00000,0x0000005a72e00000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x616f2a]
+V  [jvm.dll+0x74de7f]
+V  [jvm.dll+0x74f505]
+V  [jvm.dll+0x74fb83]
+V  [jvm.dll+0x2436d8]
+V  [jvm.dll+0x61431a]
+V  [jvm.dll+0x6090f5]
+V  [jvm.dll+0x2f7eec]
+V  [jvm.dll+0x2f7d72]
+V  [jvm.dll+0x2fca26]
+V  [jvm.dll+0x33efef]
+V  [jvm.dll+0x33ea20]
+V  [jvm.dll+0x2d5608]
+V  [jvm.dll+0x2d6766]
+V  [jvm.dll+0x7299e7]
+V  [jvm.dll+0x72b28f]
+V  [jvm.dll+0x34bd39]
+V  [jvm.dll+0x70f360]
+V  [jvm.dll+0x3b50df]
+V  [jvm.dll+0x3b71e1]
+C  [jli.dll+0x520b]
+C  [ucrtbase.dll+0x1e3fe]
+C  [KERNEL32.DLL+0x14034]
+C  [ntdll.dll+0x73691]
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x00000177f2c54fb0, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+
+Other Threads:
+  0x00000177f4dee000 GCTaskThread "GC Thread#0" [stack: 0x0000005a72e00000,0x0000005a72f00000] [id=12420]
+  0x00000177f4e4f800 ConcurrentGCThread "G1 Main Marker" [stack: 0x0000005a72f00000,0x0000005a73000000] [id=3520]
+  0x00000177f4e50800 ConcurrentGCThread "G1 Conc#0" [stack: 0x0000005a73000000,0x0000005a73100000] [id=16512]
+
+[error occurred during error reporting (printing all threads), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ffad96c4857]
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x00000177f4dd7cd0] Heap_lock - owner thread: 0x00000177f4dda000
+
+Heap address: 0x0000000701800000, size: 4072 MB, Compressed Oops mode: Non-zero based: 0x0000000701800000
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 0
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (0 events):
+No events
+
+
+Dynamic libraries:
+0x00007ff6ee030000 - 0x00007ff6ee03f000 	C:\Program Files\Java\jdk-11.0.11\bin\java.exe
+0x00007ffb28970000 - 0x00007ffb28b51000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007ffb27b30000 - 0x00007ffb27be1000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007ffb24d20000 - 0x00007ffb24f93000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007ffb25960000 - 0x00007ffb25a58000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007ffb20060000 - 0x00007ffb20078000 	C:\Program Files\Java\jdk-11.0.11\bin\jli.dll
+0x00007ffb00630000 - 0x00007ffb00645000 	C:\Program Files\Java\jdk-11.0.11\bin\VCRUNTIME140.dll
+0x00007ffb27a50000 - 0x00007ffb27af1000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007ffb28130000 - 0x00007ffb281ce000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007ffb26120000 - 0x00007ffb2617b000 	C:\WINDOWS\System32\sechost.dll
+0x00007ffb27920000 - 0x00007ffb27a42000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007ffb27790000 - 0x00007ffb27920000 	C:\WINDOWS\System32\USER32.dll
+0x00007ffb25d70000 - 0x00007ffb25d90000 	C:\WINDOWS\System32\win32u.dll
+0x00007ffb128d0000 - 0x00007ffb12b39000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.17134.2208_none_d3fb8d057c943d4a\COMCTL32.dll
+0x00007ffb281d0000 - 0x00007ffb281f8000 	C:\WINDOWS\System32\GDI32.dll
+0x00007ffb25bd0000 - 0x00007ffb25d64000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007ffb25df0000 - 0x00007ffb26112000 	C:\WINDOWS\System32\combase.dll
+0x00007ffb25b30000 - 0x00007ffb25bcf000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007ffb25ab0000 - 0x00007ffb25b29000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+0x00007ffb1ece0000 - 0x00007ffb1ecea000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007ffb27b00000 - 0x00007ffb27b2d000 	C:\WINDOWS\System32\IMM32.DLL
+0x00007ffaf0d10000 - 0x00007ffaf0dab000 	C:\Program Files\Java\jdk-11.0.11\bin\msvcp140.dll
+0x00007ffad93e0000 - 0x00007ffad9ede000 	C:\Program Files\Java\jdk-11.0.11\bin\server\jvm.dll
+0x00007ffb27780000 - 0x00007ffb27788000 	C:\WINDOWS\System32\PSAPI.DLL
+0x00007ffb070f0000 - 0x00007ffb070f9000 	C:\WINDOWS\SYSTEM32\WSOCK32.dll
+0x00007ffb20020000 - 0x00007ffb20043000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007ffb28650000 - 0x00007ffb286bc000 	C:\WINDOWS\System32\WS2_32.dll
+0x00007ffb1fed0000 - 0x00007ffb1fefa000 	C:\WINDOWS\SYSTEM32\WINMMBASE.dll
+0x00007ffb25a60000 - 0x00007ffb25aa9000 	C:\WINDOWS\System32\cfgmgr32.dll
+0x00007ffb24c90000 - 0x00007ffb24ca1000 	C:\WINDOWS\System32\kernel.appcore.dll
+0x00007ffb20d80000 - 0x00007ffb20d90000 	C:\Program Files\Java\jdk-11.0.11\bin\verify.dll
+0x00007ffb23690000 - 0x00007ffb23859000 	C:\WINDOWS\SYSTEM32\DBGHELP.DLL
+0x00007ffb0e770000 - 0x00007ffb0e799000 	C:\WINDOWS\SYSTEM32\dbgcore.DLL
+0x00007ffaffe00000 - 0x00007ffaffe28000 	C:\Program Files\Java\jdk-11.0.11\bin\java.dll
+0x00007ffb201a0000 - 0x00007ffb201aa000 	C:\Program Files\Java\jdk-11.0.11\bin\jimage.dll
+0x00007ffb20ef0000 - 0x00007ffb20efe000 	C:\Program Files\Java\jdk-11.0.11\bin\instrument.dll
+0x00007ffaff5f0000 - 0x00007ffaff606000 	C:\Program Files\Java\jdk-11.0.11\bin\zip.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\Program Files\Java\jdk-11.0.11\bin;C:\WINDOWS\SYSTEM32;C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.17134.2208_none_d3fb8d057c943d4a;C:\Program Files\Java\jdk-11.0.11\bin\server
+
+VM Arguments:
+jvm_args: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2020.3.2\lib\idea_rt.jar=53221:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2020.3.2\bin -Dfile.encoding=UTF-8 
+java_command: br.bot.hermodr.HermodrBotApplication
+java_class_path (initial): C:\Users\EDS\Documents\workspace\hermodr\target\classes;C:\Users\EDS\.m2\repository\net\dv8tion\JDA\4.2.0_247\JDA-4.2.0_247.jar;C:\Users\EDS\.m2\repository\com\google\code\findbugs\jsr305\3.0.2\jsr305-3.0.2.jar;C:\Users\EDS\.m2\repository\org\jetbrains\annotations\16.0.1\annotations-16.0.1.jar;C:\Users\EDS\.m2\repository\org\slf4j\slf4j-api\1.7.25\slf4j-api-1.7.25.jar;C:\Users\EDS\.m2\repository\com\neovisionaries\nv-websocket-client\2.14\nv-websocket-client-2.14.jar;C:\Users\EDS\.m2\repository\com\squareup\okhttp3\okhttp\3.13.0\okhttp-3.13.0.jar;C:\Users\EDS\.m2\repository\com\squareup\okio\okio\1.17.2\okio-1.17.2.jar;C:\Users\EDS\.m2\repository\club\minnced\opus-java-api\1.0.4\opus-java-api-1.0.4.jar;C:\Users\EDS\.m2\repository\net\java\dev\jna\jna\4.4.0\jna-4.4.0.jar;C:\Users\EDS\.m2\repository\club\minnced\opus-java-natives\1.0.4\opus-java-natives-1.0.4.jar;C:\Users\EDS\.m2\repository\org\apache\commons\commons-collections4\4.1\commons-collections4-4.1.jar;C:\Users\EDS\.m2\repository\net\sf\trove4j\trove4j\3.0.3\trove4j-3.0.3.jar;C:\Users\EDS\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.10.1\jackson-databind-2.10.1.jar;C:\Users\EDS\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.10.1\jackson-annotations-2.10.1.jar;C:\Users\EDS\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.10.1\jackson-core-2.10.1.jar;C:\Users\EDS\.m2\repository\com\google\api-client\google-api-client\1.31.3\google-api-client-1.31.3.jar;C:\Users\EDS\.m2\repository\com\google\oauth-client\google-oauth-client\1.31.4\google-oauth-client-1.31.4.jar;C:\Users\EDS\.m2\repository\com\google\http-client\google-http-client-gson\1.39.0\google-http-client-gson-1.39.0.jar;C:\Users\EDS\.m2\repository\com\google\code\gson\gson\2.8.6\gson-2.8.6.jar;C:\Users\EDS\.m2\repository\com\google\guava\guava\30.1-android\guava-30.1-android.jar;C:\Users\EDS\.m2\repository\com\google\guava\failureaccess\1.0.1\failureaccess-1.0.1.jar;C:\Users\EDS\.m2\rep
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     intx CICompilerCount                          = 4                                         {product} {ergonomic}
+     uint ConcGCThreads                            = 2                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 8                                         {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 1048576                                   {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+   size_t InitialHeapSize                          = 268435456                                 {product} {ergonomic}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MaxHeapSize                              = 4269801472                                {product} {ergonomic}
+   size_t MinHeapDeltaBytes                        = 1048576                                   {product} {ergonomic}
+    uintx NonNMethodCodeHeapSize                   = 5836300                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 122910970                              {pd product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 122910970                              {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+     bool UseCompressedClassPointers               = true                                 {lp64_product} {ergonomic}
+     bool UseCompressedOops                        = true                                 {lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags
+ #1: stderr all=off uptime,level,tags
+
+Environment Variables:
+PATH=C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\Java\jdk1.8.0_261\bin;C:\Program Files\nodejs\;C:\Users\EDS\oc_client;C:\Users\EDS\cwrsync_6.2.0_x64_free\bin;;C:\Program Files\Amazon\AWSCLIV2\;C:\Program Files\Amazon\AWSSAMCLI\bin\;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Users\EDS\AppData\Local\Microsoft\WindowsApps;C:\Users\EDS\maven\apache-maven-3.6.3\bin;C:\Users\EDS\AppData\Roaming\npm;C:\Users\EDS\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\EDS\cwrsync_6.2.0_x64_free\bin;
+USERNAME=EDS
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 142 Stepping 10, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 10 , 64 bit Build 17134 (10.0.17134.2145)
+Hyper-V role detected
+
+CPU:total 8 (initial active 8) (4 cores per cpu, 2 threads per core) family 6 model 142 stepping 10 microcode 0x96, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, 3dnowpref, lzcnt, ht, tsc, tscinvbit, bmi1, bmi2, adx, fma
+
+Memory: 4k page, system-wide physical 16281M (745M free)
+TotalPageFile size 20377M (AvailPageFile size 245M)
+current process WorkingSet (physical memory assigned to process): 10M, peak: 10M
+current process commit charge ("private bytes"): 60M, peak: 316M
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (11.0.11+9-LTS-194) for windows-amd64 JRE (11.0.11+9-LTS-194), built on Mar 18 2021 18:46:53 by "mach5one" with MS VC++ 15.9 (VS2017)
+
+END.
