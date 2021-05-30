@@ -2,5 +2,5 @@ FROM openjdk:11-jre-slim
 MAINTAINER reiiissamuel@gmail.com
 WORKDIR /usr/app
 COPY hermodr-1.0-SNAPSHOT-jar-with-dependencies.jar /usr/app/hermodr-1.0-SNAPSHOT-jar-with-dependencies.jar
-EXPOSE 8085
-CMD java -jar hermodr-1.0-SNAPSHOT-jar-with-dependencies.jar
+EXPOSE 8080
+CMD java -jar /usr/app/hermodr-1.0-SNAPSHOT-jar-with-dependencies.jar --no-cache add ca-certificates && update-ca-certificates
